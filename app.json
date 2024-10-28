@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Qr-code-Generator",
+    "slug": "Qr-code-Generator",
+    "version": "1.0.0",
+     "scheme": "Qr-code-Generator",
+    "orientation": "portrait",
+    "icon": "./assest/icons/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assest/icons/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assest/icons/logo.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assest/icons/logo.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(Qr-code-Generator) to access your camera",
+          "microphonePermission": "Allow $(Qr-code-Generator) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      "expo-router" // Keep other plugins here
+    ]
+    
+  }
+}
