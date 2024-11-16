@@ -1,7 +1,7 @@
-import { Text, View, ActivityIndicator } from 'react-native';
-import React, { useEffect } from 'react';
-import { SplashScreen, Stack } from 'expo-router';
-import { useFonts } from 'expo-font';
+import { Text, View, ActivityIndicator } from "react-native";
+import React, { useEffect } from "react";
+import { SplashScreen, Stack } from "expo-router";
+import { useFonts } from "expo-font";
 
 const RooyLayout = () => {
   const [fontsLoaded, error] = useFonts({
@@ -19,7 +19,6 @@ const RooyLayout = () => {
     "Cambay-Regular": require("../assest/fonts/Cambay-Regular.ttf"),
     "IBMPlexMono-Regular": require("../assest/fonts/IBMPlexMono-Regular.ttf"),
     "IBMPlexMono-Bold": require("../assest/fonts/IBMPlexMono-Bold.ttf"),
-    
   });
 
   useEffect(() => {
@@ -31,14 +30,14 @@ const RooyLayout = () => {
     }
 
     if (error) {
-      console.error('Error loading fonts:', error);
+      console.error("Error loading fonts:", error);
     }
   }, [fontsLoaded, error]);
 
   // Render a loading indicator if fonts aren't loaded yet
   if (!fontsLoaded) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator size="large" color="#0000ff" />
         <Text>Loading Fonts...</Text>
       </View>
@@ -46,13 +45,12 @@ const RooyLayout = () => {
   }
 
   return (
- 
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
+    </Stack>
   );
 };
 

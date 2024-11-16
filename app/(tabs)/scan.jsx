@@ -133,14 +133,7 @@ export default function ScanCode() {
             activeOpacity={1}
             onPress={() => setModalSatus(false)}
           >
-            <CustomToast
-              qrno={qrNo}
-              scanHistorys={{
-                breakfast: true,
-                lunch: false,
-                dinner: false,
-              }}
-            />
+            <CustomToast qrno={qrNo} scanHistorys={scanHistorys} />
           </TouchableOpacity>
         </Modal>
       </View>
